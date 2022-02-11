@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <title>Document</title>
+    <!-- https://drive.google.com/drive/folders/1VAqNd76jjskkoJr1a0Oz9xYBJJPFe-x2 -->
+    <style>
+        .up{
+            background-color: brown;
+            border-color: black;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            
+        }
+        .button{
+            width: 100px;
+            height: 30px;
+            color: black;
+            background-color: blueviolet;
+           
+        }
+        
+        .bg_body{
+            background-color: red;
+        }
+        .activ{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ryp">
+        
+        <button id="btnOpen" class="button">jjj</button>
+    </div>
+    <div class="up" id="modal">
+        <button id="btnClosed">X</button>
+    </div>
+    <script>
+        // $('.button').click function () {
+        //     $('.up').css('display' , 'none')
+        // };
+    
+        //let openModal =document.getElementById('btnOpen');
+        //openModal.onclick = function openModal() {
+            //console.log('open');
+            //document.getElementById('modal').style.display = 'block';
+            // window.style.backgroundColor= 'blueviolet';
+            //document.body.style.backgroundColor = "red";
+
+    
+        //}
+    
+        //let closedModal=document.getElementById('btnClosed');
+        //closedModal.onclick=function closedModal() {
+            //console.log('closed');
+    
+            //document.getElementById('modal').style.display = 'none';
+            //document.body.style.backgroundColor = 'white';
+
+            
+        //}
+          let modal = document.getElementById("modal");
+        let closed = document.getElementById("btnClosed");
+        let openModal = document.getElementById("btnOpen");
+        openModal.onclick = function show() {
+      
+
+            document.body.classList.toggle("bg_body");
+           modal.classList.add("activ");
+          
+        }
+
+        closed.onclick= function close() {
+            modal.classList.remove("activ");
+              document.body.classList.remove("bg_body")
+        }
+
+        
+    </script>
+</body>
+
+</html>

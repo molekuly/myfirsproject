@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maket</title>
+    <style>
+        .body {
+            border-style: solid;
+            width: 100%;
+        }
+
+        .text {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .accordion {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="background">
+            <div>
+                <button class="accordion" id="acone" style="width: 100%;">Accordion #1</button>
+            </div>
+            <div class="text" id="one">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+        </div>
+
+        <div class="backgroun">
+            <div>
+                <button class="accordion" id="actwo" style="width: 100%;">Accordion #2</button>
+            </div>
+            <div class="text" id="two">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+        </div>
+
+        <div class="back">
+            <div>
+                <button class="accordion" id="acthree" data-="">Accordion #3</button>
+            </div>
+            <div class="text" id="three">1has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // var accord = document.getElementsByClassName("accordion");
+        // var open = document.getElementsByClassName("text");
+
+        // var i;
+        // var open = document.getElementsByClassName("active");
+
+        // for (i = 0; i < accord.length; i++) {
+        //     accord[i].addEventListener("click", function () {
+        // this.classList.toggle("active");
+
+        // var panel = this.nextElementSibling;
+        // var panel = accord[i];
+
+
+        // console.log(this.nextElementSibling);
+
+        // if (panel.style.display === "block") {
+        //     panel.style.display = "none";
+        // } else {
+        //     panel.style.display = "block"
+        // }
+        //     });
+        // }
+
+
+
+        var texone = document.getElementById("one");
+        var acone = document.getElementById("acone");
+        acone.onclick = function () {
+            texone.classList.toggle('active');
+            textwo.classList.remove('active');
+            texthree.classList.remove('active');
+
+
+
+
+        }
+
+        var textwo = document.getElementById("two");
+        var actwo = document.getElementById("actwo");
+        actwo.onclick = function () {
+            texone.classList.remove('active');
+            textwo.classList.toggle('active');
+            texthree.classList.remove('active');
+
+
+
+        }
+
+        var texthree = document.getElementById("three");
+        var acthree = document.getElementById("acthree");
+        acthree.onclick = function () {
+            texthree.classList.toggle('active');
+            texone.classList.remove('active');
+            textwo.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
